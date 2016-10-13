@@ -11,7 +11,7 @@ function Character(config){
 
 
 function GoodGuy(config){
-this.color = green;
+this.color = 'green';
 
 Character.call(this, config);
 }
@@ -19,7 +19,8 @@ Character.call(this, config);
 GoodGuy.prototype = new Character();
 
 function BadGuy(config){
-this.color = red;
+this.color = 'red';
+Character.call(this, config);
 }
 
 BadGuy.prototype = new Character();
