@@ -19,7 +19,13 @@ var context = {
 
 $('.heroes').html(template(context));
 
+var $charDropdown = $('.char-dropdown');
 
+$charDropdown.on('click', function(){
+
+  $(this).next().slideToggle();
+
+});
 
 
 });
