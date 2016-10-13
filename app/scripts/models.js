@@ -1,18 +1,33 @@
 var $ =  require('jquery');
-var _ = require('underscore');
+
 
 function Character(config){
   config = config || {};
   $.extend(this, config);
-
+  this.hp = 100;
+  this.attackDamage = 20;
 
 }
 
-var neo = new Character();
-neo.hair = "brown";
-neo.height = 'tall';
 
-var chase = new Character({hair: 'brown'});
+function GoodGuy(config){
+this.color = green;
 
-console.log(neo);
-console.log(chase);
+Character.call(this, config);
+}
+
+GoodGuy.prototype = new Character();
+
+function BadGuy(config){
+this.color = red;
+}
+
+BadGuy.prototype = new Character();
+
+
+
+
+module.exports = {
+  'GoodGuy': GoodGuy,
+  'BadGuy': BadGuy
+};
