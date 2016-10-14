@@ -15,7 +15,14 @@ $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
 img {
   max-width: 100%;
 }
+//
+//OUR STYLES BELOW
+//
 
+body{
+  background: url('http://all4desktop.com/data_images/original/4238051-background.jpg') no-repeat;
+  background-size: cover;
+}
 
 .hero-list{
   display: none;
@@ -23,6 +30,16 @@ img {
 
 .char-dropdown{
   display: inline-block;
+  &:hover{
+  background-color: green;
+  }
+}
+
+.protagonist{
+  display: inline-block;
+  list-style: none;
+  color: #8A8A88;
+  font-size: 18px;
   &:hover{
   background-color: green;
   }
