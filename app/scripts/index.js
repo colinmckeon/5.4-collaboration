@@ -21,7 +21,8 @@ var goodGuys = [
 
 var badGuys = [
   new models.BadGuy({name: 'Bill', image: 'https://s-media-cache-ak0.pinimg.com/originals/f4/da/6a/f4da6a305089e0c73a6f59b8070c5a53.jpg'}),
-  new models.BadGuy({name: 'Agent Smith', image:'http://vignette1.wikia.nocookie.net/matrix/images/4/4d/Agent-smith-the-matrix-movie-hd-wallpaper-2880x1800-4710.png/revision/latest?cb=20140504013834'})
+  new models.BadGuy({name: 'Agent Smith', image: 'http://vignette1.wikia.nocookie.net/matrix/images/4/4d/Agent-smith-the-matrix-movie-hd-wallpaper-2880x1800-4710.png/revision/latest?cb=20140504013834'}),
+  // new models.BadGuy({name: 'Mr. Lahey' image: ''})
 ];
 
 
@@ -89,4 +90,27 @@ $charDropdown.on('click', function(){
 // health.value = health.value(subtract?);
 
 
+  function updateHealthStatus(){
+    $('.goodguy-holder .progress .progress-bar').css({
+      width:  selectedCharacter.hp + '%'
+    });
+
+    $('.badguy-holder .progress .progress-bar').css({
+      width:  selectedBadGuy.hp + '%'
+    })
+  }
+
+$(document).on('click', '.attack-button', function(){
+  console.log('goodguy', selectedCharacter.hp);
+  console.log('badguy', selectedBadGuy.hp);
+
+  var badGuyDamage = _.random(1, selectedBadGuy.attackDamage);
+  selectedCharacter.hp -= badGuyDamage;
+
+  var goodGuyDamage = _.random(1, selectedCharacter.attackDamage);
+  selectedBadGuy.hp -= goodGuyDamage;
+
+
+  updateHealthStatus();
+})
 });
