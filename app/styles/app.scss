@@ -24,3 +24,10 @@ img {
 .hero-list{
   display: none;
 }
+
+.char-dropdown{
+  display: inline-block;
+  &:hover{
+  background-color: green;
+  }
+}
