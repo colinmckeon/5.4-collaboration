@@ -1,7 +1,31 @@
-
+<div class="container">
   <div class="charDisplay">
-    <h3>{{name}}</h3>
-    <img src="{{image}}" alt="{{name}}" data-protag-name="{{name}}"/>
-    <br>
-    <progress id="health" value="100" max="100"></progress>
+    <div class="row">
+
+      <div class="col-md-4">
+        <div class="goodguy-holder">
+          <h3>{{name}}</h3>
+          <img class="avatar-goodguy" src="{{image}}" alt="{{name}}" data-protag-name="{{name}}"/>
+          <br>
+          <progress id="health" value="100" max="100"></progress>
+        </div>
+      </div>
+
+
+    <div class="col-md-4">
+
+    </div>
+
+
+      <div class="col-md-4">
+        <div class="badguy-holder">
+          <h3>{{name}}</h3>
+          <img class="avatar-badguy" src="{{image}}" alt="{{name}}" data-protag-name="{{name}}"/>
+          <br>
+          <progress id="health" value="100" max="100"></progress>
+        </div>
+      </div>
+
+    </div>
   </div>
+</div>

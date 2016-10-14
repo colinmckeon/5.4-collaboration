@@ -14,6 +14,7 @@ var chars = [
   new models.GoodGuy({name: 'Neo', image:'http://static.comicvine.com/uploads/original/11119/111191852/5023934-4839031750-neo1.j.jpeg'}),
   new models.GoodGuy({name: 'Beatrix Kiddo', image: 'http://static1.comicvine.com/uploads/original/11119/111194436/5168520-7476152247-9ad58.jpg'}),
   new models.GoodGuy({name: 'Bubbles', image: 'https://lh3.ggpht.com/QikRYDuc28DXrAv9-9i-W_4RTMdrlfO6SlfuZFXjnLuCd4AhDdaaDZJ5SmUT_6ibuWcE=w300'}),
+  new models.BadGuy({name: 'Bill', image: 'https://s-media-cache-ak0.pinimg.com/originals/f4/da/6a/f4da6a305089e0c73a6f59b8070c5a53.jpg'}),
   new models.BadGuy({name: 'Agent Smith', image:'http://vignette1.wikia.nocookie.net/matrix/images/4/4d/Agent-smith-the-matrix-movie-hd-wallpaper-2880x1800-4710.png/revision/latest?cb=20140504013834'})
 ];
 
@@ -38,6 +39,10 @@ $(document).on('click', '.protagonist', function(event){
   $('.ui').html(template(selectedCharacter[0]));
 });
 
+// DISPLAYS BAD GUY *******************************
+//*************************************************
+
+// var badGuys = _.filter(char, {'color': 'red'});
 
 
 
