@@ -16,16 +16,27 @@ var chars = [
   new models.BadGuy({name: 'Agent Smith', image:'http://vignette1.wikia.nocookie.net/matrix/images/4/4d/Agent-smith-the-matrix-movie-hd-wallpaper-2880x1800-4710.png/revision/latest?cb=20140504013834'})
 ];
 
+// Dropdown of goodguys ***************************
+//*************************************************
 var goodGuys = _.filter(chars, {'color': 'green'});
-$('.char-holder').html(dropdown({'chars': goodGuys}));
+$('.ui').html(dropdown({'chars': goodGuys}));
 
+var $characterName;
 
-$('.protagonist').on('click', function(event){
+$(document).on('click', '.protagonist', function(event){
   event.preventDefault();
 
-  var $characterSelection = $(this);
-  var characterName = $characterSelection.data('protag-name');
+  $characterName = $(this).text();
+
+  var selectedCharacter = goodGuys.filter(function(char){
+    return char.name === $characterName;
+  });
+
+  console.log(selectedCharacter[0].color);
+
+  $('.ui').html(template(selectedCharacter[0]));
 });
+
 
 
 
@@ -37,7 +48,7 @@ $('.protagonist').on('click', function(event){
 //   'chars': chars
 // }
 //
-// $('.heroes').html(template(context));
+// $('.input new div class').html(template(context));
 
 
 
