@@ -22,7 +22,7 @@ var goodGuys = [
 var badGuys = [
   new models.BadGuy({name: 'Bill', image: 'https://s-media-cache-ak0.pinimg.com/originals/f4/da/6a/f4da6a305089e0c73a6f59b8070c5a53.jpg'}),
   new models.BadGuy({name: 'Agent Smith', image: 'http://vignette1.wikia.nocookie.net/matrix/images/4/4d/Agent-smith-the-matrix-movie-hd-wallpaper-2880x1800-4710.png/revision/latest?cb=20140504013834'}),
-  // new models.BadGuy({name: 'Mr. Lahey' image: ''})
+  new models.BadGuy({name: 'Mr. Lahey', image: 'https://pbs.twimg.com/profile_images/577523790986477568/0HD6jqTQ.jpeg'})
 ];
 
 
@@ -101,9 +101,6 @@ $charDropdown.on('click', function(){
   }
 
 $(document).on('click', '.attack-button', function(){
-  console.log('goodguy', selectedCharacter.hp);
-  console.log('badguy', selectedBadGuy.hp);
-
   var badGuyDamage = _.random(1, selectedBadGuy.attackDamage);
   selectedCharacter.hp -= badGuyDamage;
 
