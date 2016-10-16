@@ -6,7 +6,7 @@ var template = require('../templates/template.hbs');
 var dropdown = require('../templates/dropdown.hbs');
 var _ = require('underscore');
 
-//wait for DOM to be ready
+//waits for DOM to be ready
 $(function(){
 
 var characterChoice;
@@ -45,9 +45,6 @@ $(document).on('click', '.protagonist', function(event){
   var randomNum = _.random(0, badGuys.length-1);
   selectedBadGuy = badGuys[randomNum];
 
-
-
-  console.log(selectedCharacter.color);
 
   $('.ui').html(stageTemplate());
 
@@ -95,8 +92,8 @@ $charDropdown.on('click', function(){
 setTimeout(function(){
     $('.goodguy-holder .progress .progress-bar').css({
       width:  selectedCharacter.hp + '%'
-    })
-    }, 2000);
+      })
+    }, 1000);
 
       $('.badguy-holder .progress .progress-bar').css({
         width:  selectedBadGuy.hp + '%'
@@ -118,13 +115,30 @@ $(document).on('click', '.attack-button', function(){
 
   setTimeout(function(){
     if(selectedCharacter.hp <= 0){
-      alert('You Lose!');
+      alert('YOU LOSE, HAHA!');
     } else if(selectedBadGuy.hp <= 0){
-      alert('You Win!!!!');
+      alert('YOU WIN!!!!');
     }}, 500);
 
 })
 
+
+
+$(document).on('click', '.reset-button', function(event){
+  event.preventDefault();
+  $('.ui').html(dropdown({'chars': goodGuys}));
+  var $charDropdown = $('.char-dropdown');
+
+  $charDropdown.on('click', function(){
+    $(this).next().slideToggle();
+
+  });
+});
+
+// $(document).on('click', '.attack-button', function(event){
+//   event.preventDefault();
+//     $('.avatar-goodguy').effect("shake", {times: 4}, 1000);
+// });
 
 
 
