@@ -92,16 +92,19 @@ $charDropdown.on('click', function(){
 
   function updateHealthStatus(){
 
+setTimeout(function(){
     $('.goodguy-holder .progress .progress-bar').css({
       width:  selectedCharacter.hp + '%'
-    });
-
-    $('.badguy-holder .progress .progress-bar').css({
-      width:  selectedBadGuy.hp + '%'
     })
+    }, 2000);
 
+      $('.badguy-holder .progress .progress-bar').css({
+        width:  selectedBadGuy.hp + '%'
+      })
 
   }
+
+
 
 $(document).on('click', '.attack-button', function(){
   var badGuyDamage = _.random(1, selectedBadGuy.attackDamage);
@@ -109,6 +112,7 @@ $(document).on('click', '.attack-button', function(){
 
   var goodGuyDamage = _.random(1, selectedCharacter.attackDamage);
   selectedBadGuy.hp -= goodGuyDamage;
+
 
   updateHealthStatus();
 
@@ -120,13 +124,6 @@ $(document).on('click', '.attack-button', function(){
     }}, 500);
 
 })
-
-// WIN OR LOSE ALERT ********************************
-//***************************************************
-
-
-
-
 
 
 
