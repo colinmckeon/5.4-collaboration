@@ -14,6 +14,7 @@ var selectedCharacter;
 var selectedBadGuy;
 
 var goodGuys = [
+  new models.GoodGuy({name: 'Captain Jack Sparrow', image: 'http://2.bp.blogspot.com/-gPh7sIsBkuw/UGed6wXgyGI/AAAAAAAAAVg/-crnete-KQ0/s1600/jack-sparrow-pose.png'}),
   new models.GoodGuy({name: 'Scott Pilgrim', image: 'http://vignette2.wikia.nocookie.net/scottpilgrim/images/a/a0/ScottPilgrimLiveAction.png/revision/latest?cb=20110715032006'}),
   new models.GoodGuy({name: 'Cloud Strife', image: 'http://vignette4.wikia.nocookie.net/finalfantasy/images/4/46/SSB4_-_Cloud_Strife.png/revision/latest?cb=20160228175125'}),
   new models.GoodGuy({name: 'Ellen Ripley', image: 'http://vignette1.wikia.nocookie.net/vsbattles/images/6/67/Ellen_Ripley_render.png/revision/latest?cb=20160213190344'}),
@@ -31,7 +32,8 @@ var badGuys = [
   new models.BadGuy({name: 'Sephiroth', image: 'https://upload.wikimedia.org/wikipedia/en/c/c4/Sephiroth.png'}),
   new models.BadGuy({name: 'Alien', image: 'http://www.refinfo.hu/szhely/mihalovits_nandor/Vila%C2%A6%C3%BCgegyetem/img/bg_alien.png'}),
   new models.BadGuy({name: 'Gollum', image: 'http://vignette3.wikia.nocookie.net/lotr/images/e/e1/Gollum_Render.png/revision/20141216091433'}),
-  new models.BadGuy({name: 'Evil Ex #7', image: 'http://vignette3.wikia.nocookie.net/scottpilgrim/images/d/dd/EvilEx7.png/revision/latest?cb=20110715034126'})
+  new models.BadGuy({name: 'Evil Ex #7', image: 'http://vignette3.wikia.nocookie.net/scottpilgrim/images/d/dd/EvilEx7.png/revision/latest?cb=20110715034126'}),
+  new models.BadGuy({name: 'Captain Barbossa', image: 'http://vignette4.wikia.nocookie.net/piratesdescaraibes/images/c/c4/Hector_BarbossaCast.png/revision/latest?cb=20150311130319&path-prefix=fr'})
 ];
 
 
