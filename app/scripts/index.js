@@ -14,19 +14,24 @@ var selectedCharacter;
 var selectedBadGuy;
 
 var goodGuys = [
-  new models.GoodGuy({name: 'Neo', image:'http://vignette4.wikia.nocookie.net/matrix/images/b/bb/Neo_main_page.png/revision/latest?cb=20130502002158'}),
-  new models.GoodGuy({name: 'Beatrix Kiddo', image: 'http://67.media.tumblr.com/d23cac7214553d3e6c40039ccce9cdc2/tumblr_mophleNmRo1s8a280o1_1280.png'}),
-  new models.GoodGuy({name: 'Bubbles', image: 'https://lh3.ggpht.com/QikRYDuc28DXrAv9-9i-W_4RTMdrlfO6SlfuZFXjnLuCd4AhDdaaDZJ5SmUT_6ibuWcE=w300'}),
+  new models.GoodGuy({name: 'Scott Pilgrim', image: 'http://vignette2.wikia.nocookie.net/scottpilgrim/images/a/a0/ScottPilgrimLiveAction.png/revision/latest?cb=20110715032006'}),
   new models.GoodGuy({name: 'Cloud Strife', image: 'http://vignette4.wikia.nocookie.net/finalfantasy/images/4/46/SSB4_-_Cloud_Strife.png/revision/latest?cb=20160228175125'}),
-  new models.GoodGuy({name: 'Ellen Ripley', image: 'http://vignette1.wikia.nocookie.net/vsbattles/images/6/67/Ellen_Ripley_render.png/revision/latest?cb=20160213190344'})
+  new models.GoodGuy({name: 'Ellen Ripley', image: 'http://vignette1.wikia.nocookie.net/vsbattles/images/6/67/Ellen_Ripley_render.png/revision/latest?cb=20160213190344'}),
+  new models.GoodGuy({name: 'Mega Man', image: 'http://vignette2.wikia.nocookie.net/megaman/images/2/25/MegamanX.png/revision/latest?cb=20101020210059'}),
+  new models.GoodGuy({name: 'Bubbles', image: 'https://lh3.ggpht.com/QikRYDuc28DXrAv9-9i-W_4RTMdrlfO6SlfuZFXjnLuCd4AhDdaaDZJ5SmUT_6ibuWcE=w300'}),
+  new models.GoodGuy({name: 'Legolas', image: 'http://www.pngmart.com/files/3/Legolas-PNG-File.png'}),
+  new models.GoodGuy({name: 'Neo', image:'http://vignette4.wikia.nocookie.net/matrix/images/b/bb/Neo_main_page.png/revision/latest?cb=20130502002158'})
+
 ];
 
 var badGuys = [
-  new models.BadGuy({name: 'Bill', image: 'https://s-media-cache-ak0.pinimg.com/originals/f4/da/6a/f4da6a305089e0c73a6f59b8070c5a53.jpg'}),
+  new models.BadGuy({name: 'Proto Man', image: 'https://joguepense.files.wordpress.com/2010/02/protoman-game.gif'}),
   new models.BadGuy({name: 'Agent Smith', image: 'http://vignette1.wikia.nocookie.net/the-adventures-of-the-gladiators-of-cybertron/images/4/49/Agent_Smith.png/revision/latest?cb=20150225191109'}),
   new models.BadGuy({name: 'Mr. Lahey', image: 'https://pbs.twimg.com/profile_images/577523790986477568/0HD6jqTQ.jpeg'}),
   new models.BadGuy({name: 'Sephiroth', image: 'https://upload.wikimedia.org/wikipedia/en/c/c4/Sephiroth.png'}),
-  new models.BadGuy({name: 'Alien', image: 'http://www.refinfo.hu/szhely/mihalovits_nandor/Vila%C2%A6%C3%BCgegyetem/img/bg_alien.png'})
+  new models.BadGuy({name: 'Alien', image: 'http://www.refinfo.hu/szhely/mihalovits_nandor/Vila%C2%A6%C3%BCgegyetem/img/bg_alien.png'}),
+  new models.BadGuy({name: 'Gollum', image: 'http://vignette3.wikia.nocookie.net/lotr/images/e/e1/Gollum_Render.png/revision/20141216091433'}),
+  new models.BadGuy({name: 'Evil Ex #7', image: 'http://vignette3.wikia.nocookie.net/scottpilgrim/images/d/dd/EvilEx7.png/revision/latest?cb=20110715034126'})
 ];
 
 
